@@ -1,8 +1,7 @@
 .container{
-  //max-width: $large;
+  max-width: $x-small;
   margin: 0 auto;
   box-sizing: border-box;
-  //border: 1px solid gold;
   &.small{
     max-width: $small;
     //border: 1px solid lime;

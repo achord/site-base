@@ -110,6 +110,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+h1 {
+  font-size: 6rem;
+  line-height: 7.2rem; }
+
+.test {
+  font-size: 60px;
+  line-height: 72px; }
+
+h2 {
+  font-size: 4.8rem;
+  line-height: 6rem; }
+
 h3 {
   font-size: 3.6rem;
   line-height: 4.8rem; }
@@ -310,6 +322,7 @@ input, select {
   margin-bottom: 20px; }
 
 .container {
+  max-width: 576px;
   margin: 0 auto;
   box-sizing: border-box; }
   .container.small {
