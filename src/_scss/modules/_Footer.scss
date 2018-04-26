@@ -1,0 +1,199 @@
+.Footer
+{
+  margin-top: 80px;
+  padding: 40px 20px 80px;
+
+  text-align: center;
+
+  color: #fff;
+  background-color: #000;
+  background-image: linear-gradient(-180deg, #000 0%, #31363a 100%);
+
+  a,
+  p
+  {
+    color: #fff;
+  }
+
+  &-nav
+  {
+    padding: 30px 0 60px;
+    li
+    {
+      display: inline;
+
+      list-style: none;
+      a
+      {
+        font-family: $sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+
+        padding: 10px 20px;
+
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover
+        {
+          color: $gold;
+        }
+      }
+    }
+  }
+
+  &-info
+  {
+    display: flex;
+
+    width: 100%;
+    margin: 0 0 40px;
+
+    justify-content: center;
+  }
+
+    //info
+    &-logo,
+    &-address,
+    &-twitter
+    {
+      flex: 1;
+    }
+
+    &-logo
+    {
+      font-family: $serif;
+      font-size: 3.6rem;
+      font-weight: 900;
+
+      text-align: left;
+    }
+    &-address
+    {
+      font-family: $serif;
+      font-weight: 500;
+      p
+      {
+        font-size: 2.1rem;
+      }
+    }
+    &-twitter
+    {
+      display: flex;
+      flex-direction: column;
+
+      text-align: right;
+      a
+      {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+
+        margin-bottom: 20px;
+
+        text-decoration: none;
+      }
+      i
+      {
+        position: relative;
+        top: 6px;
+
+        display: inline-block;
+
+        width: 30px;
+        height: 30px;
+        margin: 0 10px 0 0;
+
+        transition: background .2s linear;
+
+        border-radius: 50%;
+        background-color: #fff;
+        &:hover
+        {
+          background-color: $gold;
+        }
+      }
+      .icon-twitter
+      {
+        width: 18px;
+        height: 18px;
+        margin-top: 6px;
+        margin-right: 5px;
+
+        fill: #444;
+      }
+    }
+    &-legal
+    {
+      font-size: 1rem;
+
+      padding: 0 0 20px 5px;
+    }
+  }
+
+// Media Queries ***********************************************
+// Phone   
+@media (max-width: $screen-xs-max)
+{
+  .Footer
+  {
+    margin-top: 0;
+    padding: 40px 0;
+
+    &-nav
+    {
+      padding: 0 0 40px;
+      li
+      {
+        display: block;
+
+        padding: 15px 0;
+
+        list-style: none;
+        a
+        {
+          font-size: 1.7rem;
+          line-height: 2.4rem;
+        }
+      }
+    }
+    &-info
+    {
+      display: block;
+
+      text-align: center;
+    }
+    &-logo,
+    &-twitter
+    {
+      margin: 40px 5px;
+
+      text-align: center;
+    }
+  }
+}
+
+// Tablet
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
+{
+  .Footer
+  {
+    margin-top: 80px;
+    padding: 40px 10px 80px;
+
+    &-nav
+    {
+      margin: 0 -20px;
+      padding: 30px 0 60px;
+      li
+      {
+        a
+        {
+          font-family: $sans-serif;
+          font-size: 1.1rem;
+          font-weight: bold;
+
+          padding: 10px ;
+        }
+      }
+    }
+  }
+}

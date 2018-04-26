@@ -1,0 +1,113 @@
+a.Btn,
+input.Btn
+{
+  line-height: 1.2rem;
+
+  display: inline-block;
+
+  padding: 7px 10px;
+
+  user-select: none;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: .06em;
+
+  @include removeWebkit;
+  @include transitionAll;
+  @include removeWebkit;
+  @include removeButtonStyle;
+
+  &--primary
+  {
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    padding: 14px 37px;
+
+    text-transform: uppercase;
+
+    color: #fff;
+    background-color: $primary;
+
+    @include boxShadow;
+
+    &:hover
+    {
+      background-color: $active;
+    }
+  }
+  &--secondary
+  {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    padding: 13px 30px;
+
+    text-transform: uppercase;
+
+    color: #fff;
+    background-color: $primary;
+
+    @include boxShadow;
+
+    &:hover
+    {
+      background-color: $active;
+    }
+  }
+
+  &--big
+  {
+    font-weight: bold;
+
+    padding: 25px 50px;
+
+    text-transform: uppercase;
+
+    color: #fff;
+    background-color: $red;
+
+    &:hover
+    {
+      background-color: $active;
+    }
+  }
+}
+
+// Media Queries ***********************************************
+// Phone   
+@media (max-width: $screen-xs-max)
+{
+  a.Btn,
+  .Btn
+  {
+    width: 100%;
+
+    &--primary
+    {
+      font-size: 1.6rem;
+
+      padding: 20px;
+
+      color: #fff;
+    }
+
+    &--secondary
+    {
+      font-size: 1.4rem;
+      font-weight: bold;
+
+      padding: 20px;
+
+      text-transform: uppercase;
+
+      color: #fff;
+      background-color: $primary;
+    }
+
+    &--big
+    {
+      padding: 25px 15px;
+    }
+  }
+}

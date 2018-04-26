@@ -1,0 +1,20 @@
+.Hero
+{
+  margin: 0 auto;
+
+  background-size: cover;
+
+    // ./scss/functions/_bewteen : Scale up to a certain size then stop
+    // @media (min-width: $screen-xs-max)
+    // {
+    //   height: between($Hero-smallHeight, $Hero-mediumHeight, $small, $medium);
+    // }
+    // @media (min-width: $screen-sm-max)
+    // {
+    //   height: between($Hero-mediumHeight, $Hero-largeHeight, $medium, $large);
+    // }
+    // @media (min-width: $screen-md-max)
+    // {
+    //   height: $Hero-largeHeight;
+    // }
+  }

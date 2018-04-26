@@ -1,0 +1,101 @@
+// _form.scss
+button {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  cursor: pointer;
+  transition: .2s;
+
+  font-size: inherit;
+  font-weight: 100;
+
+  border: none;
+  border-radius: 0;
+  background: none;
+
+  appearance: none;
+
+}
+input,
+button,
+textarea,
+select {
+  overflow: visible;
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  vertical-align: top;
+
+  border: none;
+  outline: none;
+  background: none;
+  box-shadow: none;
+
+  text-fill-color: $white;
+
+  font-family: $sans-serif;
+
+}
+input[type="text"], input[type="search"],
+textarea,
+select,
+{
+  padding:15px 8px;
+  box-sizing: border-box;
+  &::placeholder {
+    color: $gray;
+    font-weight: 800;
+    opacity: 1;
+  }
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background: $white !important;
+  box-shadow: 0 0 0 1000px $white inset;
+
+  text-fill-color: currentColor;
+}
+button::-moz-focus-inner,
+input:-moz-focus-inner,
+select:-moz-focus-inner,
+*:focus-inner {
+  padding: 0;
+  border: none;
+}
+.pot {
+  display: none !important;
+}
+
+input[type="text"], input[type="email"],
+textarea,
+select,{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input,
+textarea,
+select { 
+  display: block;
+  border: 1px solid $gray;
+  font-size: 1.2rem;
+  color:$black;
+  font-weight: 800;
+  padding: 7px;
+  &::placeholder{
+    text-transform: uppercase;
+    color:$gray;
+    padding: 5px 0;
+    opacity: 1;
+  }
+}
+input[type=submit], input[type=reset]{
+  cursor: pointer;
+}
+
+input, select{
+  height: 30px;
+  margin-bottom: 20px;
+}
