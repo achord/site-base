@@ -1,6 +1,4 @@
 // base.scss
-@charset 'UTF-8';
-
 *,
 *:before,
 *:after {
@@ -9,27 +7,21 @@
 }
 
 html {
-  overflow: auto;
-
-  width: 100%;
+  -webkit-overflow-scrolling: touch;
   height: 100%;
-
-  -webkit-overflow-scrolling: touch
+  overflow: auto;
+  width: 100%;
 }
 body {
-  position: relative;
-
-  overflow: auto;
   -webkit-overflow-scrolling: touch;
-
-  width: 100%;
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
-
   font-size: 62.5%;
+  margin: 0;
+  min-height: 100%;
   overflow-x: hidden;
-
+  overflow: auto;
+  padding: 0;
+  position: relative;
+  width: 100%;
 }
 
 a:link,
@@ -42,8 +34,8 @@ p{
   a:active,
   a:focus {
     @include transitionColor($time: .17s);
-    text-decoration: underline;
     color: $active;
+    text-decoration: underline;
     touch-action: manipulation;
   }
   a:active,
@@ -54,6 +46,6 @@ p{
 }
 
 img{
-  width: 100%;
   height: auto;
+  width: 100%;
 }
