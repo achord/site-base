@@ -4,6 +4,7 @@
 
 - Webpack 4
 - Sass
+- Babel
 
 ### TODO
 - [x] Get Babel 8 working
