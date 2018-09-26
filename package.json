@@ -1,26 +1,32 @@
 {
   "name": "site-base",
   "version": "1.0.0",
-  "description": "### A basic setup for stand-alone web projects utilizing Webpack 4, Browsersync, and Sass.",
-  "main": "app.js",
-  "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack --mode development"
-  },
+  "description": "",
+  "main": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/achord/site-base.git"
+    "url": ""
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/achord/site-base/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/achord/site-base#readme",
+  "homepage": "",
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production --watch"
+  },
   "devDependencies": {
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^7.1.5",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1"
   }
