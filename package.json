@@ -1,27 +1,43 @@
 {
-  "name": "boot",
+  "name": "site-base",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production",
-    "server": "browser-sync start --mode development --directory --server --files '*.js, *.html, *.css, *.scss'"
+  "main": "",
+  "repository": {
+    "type": "git",
+    "url": ""
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production --watch",
+    "start:dev": "webpack-dev-server --mode development ",
+    "start:bs": "browser-sync start --mode development --directory --server --files '*.js, *.html, *.css, *.scss' --watch"
+  },
   "devDependencies": {
-    "browser-sync": "^2.23.7",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.2",
+    "browser-sync": "^2.24.7",
     "browser-sync-webpack-plugin": "^2.2.2",
-    "css-loader": "^0.28.11",
-    "mini-css-extract-plugin": "^0.4.0",
-    "node-sass": "^4.8.3",
-    "postcss-loader": "^2.1.4",
-    "sass-loader": "^7.0.1",
-    "webpack": "^4.6.0",
-    "webpack-cli": "^2.0.15"
+    "clean-css": "^4.2.1",
+    "clean-css-loader": "^1.1.0",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.3",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.9"
   },
   "browserslist": [
-    "last 2 versions"
+    "last 3 versions"
   ]
 }

@@ -1,24 +1,25 @@
 //_colors.scss
 
 // Base Colors
-$white: #fff;
 $black: #000;
+$white: #fff;
 
 // Site colors
-$blue: #1F5D9B; 
-$gold: #CBB46C;
-$navy: #23384E;
-
-$gray: #666;
+$blue: #1f5d9b; 
+$gold: #cbb46c;
 $gray--light: #888;
+$gray: #666;
+$navy: #23384e;
+$red: #ff0000;
 
+$active: $gold;
 $primary: $blue;
 $secondary: $gold;
 $tertiary: $navy;
-$active: $gold;
 
 // Extra
+
+$fail : $red;
 $green :#7fff00;
 $red : #f70056;
 $success : $green;
-$fail : $red;
