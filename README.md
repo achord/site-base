@@ -7,7 +7,7 @@
 
 ### TODO
 - [ ] Get Babel 7 working
-- [ ] Browsersync
+- [x] Browsersync
 - [ ] Autoprefixer
 - [ ] Uglify css
 - [ ] Critical CSS

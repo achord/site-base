@@ -28,6 +28,18 @@ module.exports = {
       hash: true,
       template: './src/index.html',
       filename: 'index.html'
+    }),
+    new BrowserSyncPlugin({
+      // browse to http://localhost:3000/ during development,
+      // ./public directory is being served
+      host: 'localhost',
+      port: 3000,
+      server: { baseDir: ['./'] },
+      files:[
+        './src/*.html',
+        './src/**/*.scss'
+      ],
+      injectCss:true
     })
   ]
 };
