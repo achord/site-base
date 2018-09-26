@@ -1,6 +1,8 @@
 // Webpack 4
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+
 module.exports = {
   entry: { main: './src/js/index.js' },
   module: {
@@ -45,11 +47,5 @@ module.exports = {
       ],
       injectCss:true
     }),
-    new MiniCssExtractPlugin({
-        // Options similar to the same options in webpackOptions.output
-        // both options are optional
-        //filename: "main.css",
-        //chunkFilename: "testid.css"
-    })
   ]
 };
