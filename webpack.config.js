@@ -9,9 +9,12 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         // TODO Get Babel loader working
-        // use: {
-        //   loader: "babel-loader"
-        // }
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
       },
       {
         test: /\.scss$/,
@@ -20,10 +23,6 @@ module.exports = {
             "css-loader", // translates CSS into CommonJS
             "sass-loader" // compiles Sass to CSS, using Node Sass by default
         ]
-      },
-      {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
       }
     ]
   },

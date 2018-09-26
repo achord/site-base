@@ -6,7 +6,7 @@
 - Sass
 
 ### TODO
-- [ ] Get Babel 7 working
+- [x] Get Babel 8 working
 - [x] Browsersync
 - [x] Autoprefixer
 - [ ] Uglify css
