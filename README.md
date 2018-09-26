@@ -8,8 +8,9 @@
 ### TODO
 - [ ] Get Babel 7 working
 - [x] Browsersync
-- [ ] Autoprefixer
+- [x] Autoprefixer
 - [ ] Uglify css
 - [ ] Critical CSS
 - [ ] Imgmin
-- [ ] Move this to Post-css
+- [ ] Post-css
+- [ ] Source Maps
