@@ -4,9 +4,8 @@
   "description": "### A basic setup for stand-alone web projects utilizing Webpack 4, Browsersync, and Sass.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --mode development ./src/index.js --output ./ui/js/main.js --watch",
-    "build": "webpack --mode production --entry ./src/test/test.js --output ./ui/js/main.js --watch "
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
   },
   "repository": {
     "type": "git",
@@ -19,6 +18,9 @@
   },
   "homepage": "https://github.com/achord/site-base#readme",
   "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1"
   }
