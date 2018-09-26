@@ -1,2 +1,3 @@
 console.log('Testing');
-import style from "./_scss/main.scss";
+console.log('Testing too');
+//import style from "./_scss/main.scss";

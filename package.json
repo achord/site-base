@@ -1,27 +1,25 @@
 {
-  "name": "boot",
+  "name": "site-base",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "### A basic setup for stand-alone web projects utilizing Webpack 4, Browsersync, and Sass.",
+  "main": "app.js",
   "scripts": {
-    "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production",
-    "server": "browser-sync start --mode development --directory --server --files '*.js, *.html, *.css, *.scss'"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development ./src/index.js --output ./ui/js/main.js --watch",
+    "build": "webpack --mode production --entry ./src/test/test.js --output ./ui/js/main.js --watch "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/achord/site-base.git"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^2.23.7",
-    "browser-sync-webpack-plugin": "^2.2.2",
-    "css-loader": "^0.28.11",
-    "mini-css-extract-plugin": "^0.4.0",
-    "node-sass": "^4.8.3",
-    "postcss-loader": "^2.1.4",
-    "sass-loader": "^7.0.1",
-    "webpack": "^4.6.0",
-    "webpack-cli": "^2.0.15"
+  "bugs": {
+    "url": "https://github.com/achord/site-base/issues"
   },
-  "browserslist": [
-    "last 2 versions"
-  ]
+  "homepage": "https://github.com/achord/site-base#readme",
+  "devDependencies": {
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1"
+  }
 }
