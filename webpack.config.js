@@ -1,10 +1,14 @@
 // Webpack 4
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const devMode = process.env.NODE_ENV !== 'production';
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+// TODO get minify css to work with node-sass
 module.exports = {
-  entry: { main: './src/js/index.js' },
+  entry: { main: './src/app.js' },
   module: {
     rules: [
       {
@@ -18,15 +22,33 @@ module.exports = {
           }
         }
       },
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     MiniCssExtractPlugin.loader,
+      //     "css-loader"
+      //   ]
+      // },
       {
         test: /\.scss$/,
-        use: [
-            "style-loader", // creates style nodes from JS strings
-            "css-loader", // translates CSS into CommonJS
-            "sass-loader", // compiles Sass to CSS, using Node Sass by default
-            "style-loader",
-            "css-loader"
-        ]
+        use: ExtractTextPlugin.extract(
+          {
+            fallback: 'style-loader',
+            use: ['css-loader', 'sass-loader']
+          })
+        // use: [
+        //     "style-loader", // creates style nodes from JS strings
+        //     "css-loader", // translates CSS into CommonJS
+        //     "sass-loader", // compiles Sass to CSS, using Node Sass by default
+        // ]
+      },
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract(
+          {
+            fallback: 'style-loader',
+            use: ['css-loader']
+          })
       }
     ]
   },
@@ -34,7 +56,7 @@ module.exports = {
     // new HtmlWebpackPlugin({
     //   inject: false,
     //   hash: true,
-    //   template: './src/index.html',
+    //   template: './index.html',
     //   filename: 'index.html'
     // }),
     new BrowserSyncPlugin({
@@ -43,11 +65,14 @@ module.exports = {
       host: 'localhost',
       port: 3000,
       server: { baseDir: ['./'] },
-      files:[
-        './src/*.html',
-        './src/**/*.scss'
-      ],
+      // files:[
+      //   './*.html',
+      //   './**/*.scss'
+      // ],
       injectCss:true
+    }),
+    new ExtractTextPlugin({
+      filename: 'main.css'
     }),
   ]
 };
