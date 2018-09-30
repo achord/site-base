@@ -1,10 +1,11 @@
 // Webpack 4
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const devMode = process.env.NODE_ENV !== 'production';
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+
 
 // TODO get minify css to work with node-sass
 module.exports = {
@@ -18,7 +19,7 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-react']
           }
         }
       },
@@ -64,7 +65,7 @@ module.exports = {
       // ./public directory is being served
       host: 'localhost',
       port: 3000,
-      server: { baseDir: ['./'] },
+      server: { baseDir: ['./dist/'] },
       // files:[
       //   './*.html',
       //   './**/*.scss'
@@ -73,6 +74,10 @@ module.exports = {
     }),
     new ExtractTextPlugin({
       filename: 'main.css'
+    }),
+    new HtmlWebPackPlugin({
+      template: "./index.html",
+      filename: "./index.html"
     }),
   ]
 };

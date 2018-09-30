@@ -7,7 +7,7 @@
     "type": "git",
     "url": ""
   },
-  "author": "StevenAchord",
+  "author": "achord",
   "license": "ISC",
   "bugs": {
     "url": ""
@@ -21,6 +21,7 @@
   "devDependencies": {
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.2",
     "browser-sync": "^2.24.7",
     "browser-sync-webpack-plugin": "^2.2.2",
@@ -40,5 +41,9 @@
   },
   "browserslist": [
     "last 3 versions"
-  ]
+  ],
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
 }
