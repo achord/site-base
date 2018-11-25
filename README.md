@@ -4,14 +4,4 @@
 
 - Webpack 4
 - Sass
-- Babel
-
-### TODO
-- [x] Get Babel 8 working
-- [x] Browsersync
-- [x] Autoprefixer
-- [ ] Uglify css
-- [ ] Critical CSS
-- [ ] Imgmin
-- [ ] Post-css
-- [ ] Source Maps
+- Babel 8

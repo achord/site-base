@@ -86,6 +86,16 @@
 /************************************************************************/
 /******/ ({
 
+<<<<<<< HEAD
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, exports) {
+
+eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nError: ENOENT: no such file or directory, open '/Users/stevenachord/Dropbox/Sites/site-base/src/index.js'\\n    at Error (native)\");\n\n//# sourceURL=webpack:///./src/index.js?");
+=======
 /***/ "./src/app.js":
 /*!********************!*\
   !*** ./src/app.js ***!
@@ -106,6 +116,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css
 /***/ (function(module, exports) {
 
 eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/css/main.scss?");
+>>>>>>> f9cebf35611d8f50fda46a204032d5891fcb9ac5
 
 /***/ })
 
