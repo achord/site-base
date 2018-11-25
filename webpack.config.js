@@ -2,10 +2,15 @@
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const path = require("path");
 
 // TODO get minify css to work with node-sass
 module.exports = {
   entry: { main: './src/app.js' },
+  // Optional. Default is ./dist
+  output: {
+    path: path.join(__dirname, "./dist")
+  },
   module: {
     rules: [
       {
@@ -52,7 +57,10 @@ module.exports = {
       // browse to http://localhost:3000/ during development,
       // ./public directory is being served
       host: 'localhost',
+      // For static site
       port: 3000,
+      // For self-hosted e.g. Craft CMS
+      //proxy: "localhost:8888",
       server: { baseDir: ['./'] },
       // files:[
       //   './*.html',

@@ -1,13 +1,13 @@
 {
-  "name": "Site-base",
-  "version": "1.0.2",
+  "name": "site-base",
+  "version": "1.0.0",
   "description": "",
   "main": "",
   "repository": {
     "type": "git",
     "url": ""
   },
-  "author": "StevenAchord",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": ""
@@ -16,7 +16,8 @@
   "scripts": {
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production --watch",
-    "start:dev": "webpack-dev-server --mode development"
+    "start:dev": "webpack-dev-server --mode development ",
+    "start:bs": "browser-sync start --mode development --directory --server --files '*.js, *.html, *.css, *.scss' --watch"
   },
   "devDependencies": {
     "@babel/core": "^7.1.0",
@@ -27,11 +28,9 @@
     "clean-css": "^4.2.1",
     "clean-css-loader": "^1.1.0",
     "css-loader": "^1.0.0",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.3",
     "node-sass": "^4.9.3",
-    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
     "webpack": "^4.20.2",
@@ -39,10 +38,6 @@
     "webpack-dev-server": "^3.1.9"
   },
   "browserslist": [
-<<<<<<< HEAD
-    "last 4 versions"
-=======
     "last 3 versions"
->>>>>>> f9cebf35611d8f50fda46a204032d5891fcb9ac5
   ]
 }
