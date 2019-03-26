@@ -62,11 +62,11 @@ module.exports = {
       // For self-hosted e.g. Craft CMS
       //proxy: "localhost:8888",
       server: { baseDir: ['./'] },
-      // files:[
-      //   './*.html',
-      //   './**/*.scss'
-      // ],
-      injectCss:true
+      files:[
+        './*.html',
+        './**/*.scss',
+      ],
+      injectCss: true, 
     }),
     new ExtractTextPlugin('main.css'),
     new OptimizeCssAssetsPlugin({

@@ -39,10 +39,6 @@
     "webpack-dev-server": "^3.1.9"
   },
   "browserslist": [
-<<<<<<< HEAD
     "last 4 versions"
-=======
-    "last 3 versions"
->>>>>>> f9cebf35611d8f50fda46a204032d5891fcb9ac5
   ]
 }
