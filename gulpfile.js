@@ -11,8 +11,8 @@ var gulp = require('gulp'),
   concat = require('gulp-concat')
   babel = require('gulp-babel')
 
-var uiPath = './src/'
-var destPath = './dist/'
+var uiPath = 'src/'
+var destPath = 'dist/'
 
 var paths = {
   styles: {
@@ -43,7 +43,7 @@ function style() {
       )
       .pipe(sass().on('error', sass.logError))
       // Use postcss with autoprefixer and compress the compiled file using cssnano
-      .pipe(postcss([autoprefixer(), cssnano()]))
+      //.pipe(postcss([autoprefixer(), cssnano()]))
       .pipe(sourcemaps.write())
       .pipe(gulp.dest(paths.styles.dest))
       .pipe(browserSync.reload({stream: true}))
@@ -54,11 +54,11 @@ function style() {
 function jsCompile(params) {
   return (
     gulp
-      //.src(paths.js.src) // all js
-      .src([
+      .src(paths.js.src) // all js
+      //.src([
         //uiPath + '_js/sticky-nav.js',
         //uiPath + '_js/scroll-to.js',
-      ])
+      //])
       .pipe(
         plumber({
           errorHandler: notify.onError('Error: <%= error.message %>'),
