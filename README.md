@@ -2,6 +2,6 @@
 
 ## A basic setup for stand-alone web projects
 
-- Webpack 4
+- Gulp 
 - Sass
-- Babel 8
+- Babel
